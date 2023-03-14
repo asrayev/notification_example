@@ -1,8 +1,11 @@
 // ignore: depend_on_referenced_packages
+import 'dart:math';
+
 import 'package:firebase_messaging/firebase_messaging.dart';
 import '../../bloc/notifications_bloc/notification_cacher_bloc/notification_cacher_bloc.dart';
 import '../models/notification_model.dart';
 import '../repository/notification_repository.dart';
+import 'local_notification.dart';
 
 
 class NotificationService{
@@ -21,7 +24,8 @@ class NotificationService{
         print("FOREGRAUNDGA TUSHDI");
         NotificationCacherBloc().add(DoCachingNotificationEvent(notificationModel: notificationModel));
         //NavigationService.instance.navigateToErrorScreen(routeName: RouteName.bottomNavigation);
-        // LocalNotificationService.localNotificationService.showNotification(id: 1, title: notificationModel.title, subtitle: notificationModel.description);
+        //  LocalNotificationService.localNotificationService.showNotification(id: 1, title: "SALK", subtitle: "ASDASDASDA");
+        LocalNotificationService.localNotificationService.showNotification(id: Random().nextInt(100), title: "Sizga pul kelib tushdi", subtitle: "Kirib xabar oling");
       }
     });
   }
