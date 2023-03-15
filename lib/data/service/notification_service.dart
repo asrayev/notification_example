@@ -1,6 +1,6 @@
 // ignore: depend_on_referenced_packages
 import 'dart:math';
-
+// ignore: depend_on_referenced_packages
 import 'package:firebase_messaging/firebase_messaging.dart';
 import '../../bloc/notifications_bloc/notification_cacher_bloc/notification_cacher_bloc.dart';
 import '../models/notification_model.dart';
