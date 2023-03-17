@@ -13,7 +13,7 @@ class NotificationCacherBloc extends Bloc<DoCachingNotificationEvent, Notificati
     on<DoCachingNotificationEvent>(cacheNotification);
   }
 
-
+print("asd");
   cacheNotification(DoCachingNotificationEvent event, emit) {
     emit(NotificationCacherState(notificationStatus: NotificationStatus.CACHING_IN_PROGRESS));
     try{
