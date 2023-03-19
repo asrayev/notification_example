@@ -25,6 +25,7 @@ class NotificationService{
         NotificationCacherBloc().add(DoCachingNotificationEvent(notificationModel: notificationModel));
         //NavigationService.instance.navigateToErrorScreen(routeName: RouteName.bottomNavigation);
         //  LocalNotificationService.localNotificationService.showNotification(id: 1, title: "SALK", subtitle: "ASDASDASDA");
+        print("asd");
         LocalNotificationService.localNotificationService.showNotification(id: Random().nextInt(100), title: "Sizga pul kelib tushdi", subtitle: "Kirib xabar oling");
       }
     });
