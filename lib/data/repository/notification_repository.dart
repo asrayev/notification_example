@@ -21,6 +21,7 @@ class NotificationsRepository{
 
     String databasesPath = await getDatabasesPath();
     String dbPath = '${databasesPath}notifications.db';
+    print("asd");
 
     var database = await openDatabase(dbPath, version: 1, onCreate: populateDb);
     return database;
